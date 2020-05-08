@@ -15,7 +15,7 @@ This code is currently live at <a href='https://humanresources.gordon.edu'>Gordo
     <li><b>[snippet_display_thankyous]:</b> This shortcode will display the most recent 5 shoutouts to the user and allow them to view 5 more at a time with a button.
   </ul>
       </li><li>
-      Fill in the database information on all 4 code blocks with your site's database credentials (can be found in wp-config file) (There may be more than one place to do so in each file)
+      Fill in the database information on all 4 code pages with your site's database credentials (can be found in wp-config file) (There may be more than one place to do so in each file)
     </li><li>
       Execute these two mySQL queries into the wordpress database:
       <ul><li>
