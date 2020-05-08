@@ -140,10 +140,10 @@ function submit_thankyou() {
 	$date = $d1->format('Y-m-d H:i:s');
 	
 	/* Set up sql information for database access. */
-	$host = "webappsl3.gordon.edu";
-	$dbusername = "admin_humanres";
-	$dbpassword = "yrBtUta5mP";
-	$dbname = "admin_humanresources";
+	$host = "DATABASE HOST";
+	$dbusername = "DATABASE USERNAME";
+	$dbpassword = "DATABASE PASSWORD";
+	$dbname = "DATABASE NAME";
 
 	/* Initialize connection to sql database. */
 	$mysqli = new mysqli($host, $dbusername, $dbpassword, $dbname);
@@ -157,7 +157,7 @@ function submit_thankyou() {
 		$sql = "INSERT INTO staff_thankyou (employee_name,employee_department,employee_email,thankyou_text,sender_email) VALUES ('$employee_name','$employee_department','$employee_email','$thankyou_text','$sender_email')";
 			
 		/* Send an email to the head of HR to notify of a new & unapproved shoutout. */
-		mail('chris.jones@gordon.edu','New message at humanresources.gordon.edu',('There is a new message on the human resources website waiting to be approved. Please visit https://humanresources.gordon.edu/approval-queue to approve or deny it.'));
+		mail('admin@yourdomain.com','New message at *url*',('There is a new message on the website waiting to be approved. Please visit https://humanresources.gordon.edu/approval-queue to approve or deny it.'));
 	} else {
 		$sql = "no query";
 		$error = "Not all required fields are filled. No query has been submitted.";
