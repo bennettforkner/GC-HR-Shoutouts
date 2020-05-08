@@ -15,10 +15,10 @@ function display_authorization_control() {
 	$css = "";
 	
 	/* Set up sql information for database access. */
-	$host = "webappsl3.gordon.edu";
-	$dbusername = "admin_humanres";
-	$dbpassword = "yrBtUta5mP";
-	$dbname = "admin_humanresources";
+	$host = "DATABASE HOST";
+	$dbusername = "DATABASE USERNAME";
+	$dbpassword = "DATABASE PASSWORD";
+	$dbname = "DATABASE NAME";
 	
 	/* Initialize connection to sql database. */
 	$mysqli = new mysqli($host, $dbusername, $dbpassword, $dbname);
