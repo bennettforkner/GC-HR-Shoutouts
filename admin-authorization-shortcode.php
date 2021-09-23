@@ -147,8 +147,8 @@ function display_authorization_control() {
 			<h3 style='color:white;'>Authorized Users:</h3>
 		";
 	
-	/* Array to store the users that may not be unauthorized. */
-	$not_unauthorizeable = array('','nsg-bennettf','chrishpriv','cts_admin','ronnie.sinclair','gene.park','chris.jones');
+	/* Array to store the usernames that may not be unauthorized. */
+	$not_unauthorizeable = array();
 	
 	/* Get all authorized users from the database. */
 	$sql = "SELECT * FROM approval_users";
@@ -251,8 +251,8 @@ function unauthorize_user() {
 	/* $user_login: the passed username to be unauthorized. */
 	$user_login = $_POST['user_login'];
 	
-	/* Array to store the users that may not be unauthorized. */
-	$not_unauthorizeable = array('','nsg-bennettf','chrishpriv','cts_admin','ronnie.sinclair','gene.park','chris.jones');
+	/* Array to store the usernames that may not be unauthorized. */
+	$not_unauthorizeable = array();
 	
 	/* Check if the user is unauthorizeable. */
 	if (array_search(strtolower($user_login),$not_unauthorizeable) == true) {
